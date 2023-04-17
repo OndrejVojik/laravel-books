@@ -1,0 +1,49 @@
+.latest-books {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 1em;
+
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    li {
+        width: 34%;
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-start;
+        list-style: none;
+        padding: 0.5em;
+        background-color: #f0f0f0;
+        margin-right: 1em;
+        margin-bottom: 1em;
+
+
+        h3{
+            margin-top: 0.25em;
+            font-weight: 400;
+        }
+    }
+
+    li img {
+        order: -1;
+        width: 4em;
+        margin-right: 1em;
+    }
+
+    .loader {
+        width: 2em;
+        height: 2em;
+        transform-origin: 50% 65%;
+        background: transparent
+            url("https://classes.codingbootcamp.cz/assets/classes/1478/kisspng-lolcat-kitten-pet-5afe4a36c9ec56.1433183815266145828271.png")
+            center/contain no-repeat scroll;
+        animation: rotation 1s infinite linear;
+    }
+}

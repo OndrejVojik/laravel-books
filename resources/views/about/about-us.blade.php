@@ -1,4 +1,4 @@
-@extends('layout.main', ['current_menu_item' => 'about-us'])
+@extends('layouts.main', ['current_menu_item' => 'about-us'])
 
 
 @section('content')

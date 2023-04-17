@@ -1,0 +1,22 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+    max-width: 20em;
+
+    label {
+        margin: 0.5em 0;
+    }
+
+    input[type="text"] {
+        font-size: 1.25em;
+        padding: 0.25em;
+    }
+
+    button {
+        font-size: 1em;
+        align-self: flex-start;
+        padding: 0.5em 1em;
+        margin-top: 1em;
+    }
+}

@@ -1,0 +1,17 @@
+.admin-left-menu {
+    padding: 2em;
+    background-color: #013c8f;
+    color: white;
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        text-decoration: none;
+        padding: 0.5em;
+
+        &:hover {
+            background-color: #ffffff33;
+        }
+    }
+}
