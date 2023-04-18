@@ -1,0 +1,36 @@
+.book-detail{
+    display: flex;
+    flex-direction: column;
+
+    &__data{
+        display: flex;
+    }
+
+    &__image{
+        margin-right: 1em;
+        width: 15em;
+
+        img{
+        max-width: 100%;
+    }
+    }
+
+    &__review{
+        border-left: 2px solid silver;
+        padding-left: 1em;
+        margin-bottom: 1em;
+    }
+
+    &__review-form{
+        margin-top: 2em;
+    }
+
+    &__review-time{
+        font-size: 0.875em;
+        font-style: italic;
+    }
+
+    &__review-text{
+        padding: 0.5em;
+    }
+}

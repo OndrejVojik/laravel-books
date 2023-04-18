@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
 {
@@ -14,4 +15,23 @@ class BookController extends Controller
             ->limit(10)
             ->get();
     }
+
+    public function show($book_id){
+        $book = Book::findOrFail($book_id);
+        $reviews = $book->reviews()
+            ->with('user')
+            ->orderBy('updated_at', 'desc')
+            ->get();
+
+            if(Auth::check()){
+                $users_review = $book->reviews()
+                    ->where('user_id', Auth::id())
+                    ->first();
+            } else {
+                $users_review = null;
+            }
+        return view('books.show', compact('book', 'reviews', 'users_review'));
+    }
+
+
 }

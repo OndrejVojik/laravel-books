@@ -1,0 +1,30 @@
+.top-menu {
+    display: flex;
+    background-color: #ddd;
+
+    strong{
+        padding: 0.5em;
+        background-color: #efefef;
+    }
+    &__item {
+        display: flex;
+        padding: 1em;
+        text-decoration: none;
+        color: inherit;
+        margin-right: 1em;
+
+        &--highlighted{
+            background-color: #ffffff66;
+            text-decoration: none;
+        }
+
+        &:hover{
+            background-color: #ffffffaa;
+        }
+
+        &[href$="/login"],
+        &--pull--rigth{
+            margin-left: auto;
+        }
+    }
+}

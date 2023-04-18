@@ -1,27 +1,7 @@
-*{
-    box-sizing: border-box;
-}
+@import 'common/common.scss';
 
-html {
- font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
-}
-
-nav {
-    display: flex;
-
-    strong{
-        padding: 0.5em;
-        background-color: #efefef;
-    }
-    a {
-        text-decoration: none;
-        color: inherit;
-        margin-right: 1em;
-    }
-}
-
-h1 {
-    color: red;
-}
+@import 'common/alerts.scss';
+@import 'common/top-menu.scss';
 
 @import 'pages/index.scss';
+@import 'pages/book-detail.scss';

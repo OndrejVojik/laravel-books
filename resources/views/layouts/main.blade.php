@@ -10,9 +10,14 @@
 <body>
 
     @include('common.navigation', ['current_menu_item' => $current_menu_item ?? null])
-    @include('common.alerts')
-    @yield('content')
 
+    <div class="main-content">
+
+        @include('common.alerts')
+        @yield('content')
+        
+    </div>
+    
     @vite('resources/js/app.js')
     
 </body>

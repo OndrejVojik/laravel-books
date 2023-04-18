@@ -1,0 +1,12 @@
+.alert{
+    padding: 1em;
+    &--success{
+        background-color: lightgreen;
+        border: 1px solid green;
+    }
+
+    &--error {
+        background-color: rgb(255, 224, 229);
+        border: 1px solid red;
+    }
+}

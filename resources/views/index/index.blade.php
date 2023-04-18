@@ -19,12 +19,13 @@
 
     <div class="crime-books">
         @foreach ($crime_books as $book)
-        <div class="crime-books-book">
+        <a 
+        class="crime-books-book"
+        href="{{route('books.show', $book->id)}}">
             <h3>{{$book->title}}</h3>
             Authors: {{ $book->authors->pluck('name')->join(', ') }}<br>
             Published by: {{ $book->publishers->pluck('name')->join(', ') }}
-
-        </div>
+        </a>
         @endforeach
     </div>
     

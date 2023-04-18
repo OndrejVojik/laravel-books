@@ -1,27 +1,36 @@
-    <nav>
-        <a href="{{route('homepage')}}">
-            @if ($current_menu_item === 'homepage')
-                <strong>Home</strong>
-            @else
+    <nav class="top-menu">
+        <a 
+            href="{{route('homepage')}}"
+            class="top-menu__item{{$current_menu_item === 'homepage' ? ' top-menu__item--highlighted' : ''}}"
+        >
                 Home
-            @endif
-            
         </a>
 
-        <a href="{{route('about-us')}}">
-            @if ($current_menu_item === 'about-us')
-                <strong>About</strong>
-            @else
+        <a 
+            href="{{route('about-us')}}"
+            class="top-menu__item{{$current_menu_item === 'about-us' ? ' top-menu__item--highlighted' : ''}}"
+        >
                 About
-            @endif
         </a>
 
         @guest
-            <a href="{{'login'}}">Log in</a>
-            <a href="{{'register'}}">Register</a>
+            <a 
+            href="{{'login'}}"
+            class="top-menu__item top-menu__item--pull--rigth{{$current_menu_item === 'login' ? ' top-menu__item--highlighted' : ''}}"
+            >
+            Log in
+            </a>
+            <a 
+            href="{{'register'}}"
+            class="top-menu__item{{$current_menu_item === 'register' ? ' top-menu__item--highlighted' : ''}}"
+            >
+            Register
+            </a>
         @endguest
 
         @auth
+
+        <span class="top-menu__item top-menu__item--pull--rigth">
 
             Logged in as {{auth()->user()->email}} &nbsp;
             <form action="{{ route('logout') }}" method="post">
@@ -31,6 +40,8 @@
             <button>Logout</button>
  
             </form>
+        </span>
+            
         @endauth
 
         

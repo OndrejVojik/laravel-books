@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main', ['current_menu_item' => 'login'])
 
 @section('content')
 <h1>Login</h1>
