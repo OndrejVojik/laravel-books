@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\BookController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/books/latest',[BookController::class, 'latest']);
+Route::get('/users',[UserController::class, 'index']);

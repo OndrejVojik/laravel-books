@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\BookController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('can:admin')->group(function() {
@@ -17,5 +18,7 @@ Route::middleware('can:admin')->group(function() {
     Route::post('/admin/books',[BookController::class, 'store'])->name('admin.books.store');
     Route::get('/admin/books/{book_id}',[BookController::class, 'edit'])->name('admin.books.edit');
     Route::put('/admin/books/{book_id}', [BookController::class, 'update'])->name('admin.books.update');
+
+    Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users');
 
 });
